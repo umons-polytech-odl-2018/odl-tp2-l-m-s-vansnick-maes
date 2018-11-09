@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class Panel extends JFrame {
 	SubPanel myPanel = new SubPanel();
+	private JComboBox liste;
 
 	public Panel(Drawable[] drawables) {
 		super("Panel");
@@ -13,7 +14,10 @@ public class Panel extends JFrame {
 		this.setDefaultCloseOperation(3);
 		Container contentPane = this.getContentPane();
 		contentPane.add(this.myPanel);
-		this.setSize(300, 300);
+		this.setSize(500, 500);
+		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
+
+
 }

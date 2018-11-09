@@ -1,15 +1,30 @@
 package exercise1;
 
-public class Employee {
-	public int computeSalary() {
-		return 0;
-	}
+import exercise2.Payable;
 
-	public void sell() { }
+public abstract class Employee implements Payable {
 
-	public void workOneHour() { }
+	protected String name;
+	private int sales=0;
+	private int workHours=0;
+
+
+	public abstract int computeSalary();
+
+	public void sell() { sales++;}
+
+	public void workOneHour() { workHours++;}
 
 	public String getName() {
-		return null;
+		return this.name;
 	}
+
+	 protected int getSales(){
+		return sales;
+	 }
+
+	 protected int getWorkHours(){
+		return workHours;
+	 }
+
 }

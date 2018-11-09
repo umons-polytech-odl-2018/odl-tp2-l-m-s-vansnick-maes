@@ -1,5 +1,6 @@
 package exercise2;
 
+import exercise1.Employee;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,6 +27,6 @@ public class ProductionWorkerTest {
 	@Test
 	public void productionWorkerIsNotAnEmployee() {
 		ProductionWorker productionWorker = exercise2.buildProductiveWorker(25);
-		assertThat(productionWorker).isNotInstanceOf(Payable.class);
+		assertThat(productionWorker).isNotInstanceOf(Employee.class);
 	}
 }
